@@ -1,0 +1,254 @@
+/* Reset e base */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f9fb;
+    color: #003366;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #f7f9fb;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+header .logo {
+    width: 50px;
+}
+
+
+nav {
+    float: right;
+}
+
+nav a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: #003366;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: 0.3s;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav a:hover {
+    color: #FFD700;
+}
+.destaque-consultora {
+    color: #FFD700;
+}
+
+
+/* --- Estilo Página da Consultora --- */
+
+.sobre-consultora {
+    padding: 40px 20px;
+    background-color: #f7f9fb;
+    color: #003366;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sobre-consultora h1,
+.sobre-consultora h2,
+.sobre-consultora h3 {
+    color: #002147;
+}
+
+.sobre-consultora p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.consultora-foto {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 0 20px 20px 0; /* Espaço à direita e abaixo da imagem */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    float: left;
+}
+
+
+
+.certificado-img {
+    display: block;
+    max-width: 1000px;         /* Aumenta o tamanho máximo */
+    width: 100%;               /* Faz ele escalar em telas menores */
+    height: auto;            /* Altura fixa para manter proporção */
+    margin: 30px auto;          /* Centraliza horizontalmente e dá espaço em cima e embaixo */
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);  /* Sombra mais intensa */
+    border: 3px solid #FFD700; /* Borda dourada fina para destacar */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .sobre-consultora {
+        padding: 20px 10px;
+    }
+
+    .consultora-foto,
+    .certificado-img {
+        width: 100%;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #00397b;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    position: relative;
+    margin-top: 40px;
+}
+
+footer .social-icon {
+    width: 30px;
+    position: absolute;
+    top: 20px;
+    filter: invert(100%);
+    transition: transform 0.3s ease;
+}
+
+footer .insta-icon {
+    right: 100px; /* Instagram mais à esquerda */
+}
+
+footer .facebook-icon {
+    right: 60px;  /* Facebook ao centro */
+}
+
+footer .maps-icon {
+    right: 20px;  /* Maps mais à direita */
+}
+
+footer .social-icon:hover {
+    transform: scale(1.2);
+}
+
+
+
+/* Animações Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Responsividade */
+/* Responsividade */
+
+/* Tablets (até 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        padding: 15px;
+    }
+
+    nav {
+        float: none;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 10px 15px;
+        font-size: 1rem;
+    }
+
+    .area-hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image img {
+        max-width: 80%;
+        margin-top: 20px;
+    }
+
+    .cards {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        width: 45%;
+    }
+}
+
+/* Celulares médios (até 768px) */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .botao-centro button {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    header .logo {
+        width: 80px;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    .hero-text h1 {
+        font-size: 24px;
+    }
+
+    .botao-centro button {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+
+    footer img {
+        width: 20px;
+        right: 10px;
+        top: 10px;
+    }
+}
